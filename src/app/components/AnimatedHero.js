@@ -7,6 +7,8 @@ export default function AnimatedHero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -19,6 +21,8 @@ export default function AnimatedHero() {
   }, []);
   
   const calculateTransform = (axis) => {
+    if (typeof window === 'undefined') return 0;
+    
     const value = axis === 'x' 
       ? mousePosition.x / window.innerWidth - 0.5 
       : mousePosition.y / window.innerHeight - 0.5;
