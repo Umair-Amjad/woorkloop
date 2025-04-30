@@ -1,8 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-green-dark: #4CAF50;
+  --primary-green-light: #8BC34A;
+  --primary-teal-dark: #009688;
+  --primary-teal-light: #00BCD4;
+  --primary-blue-dark: #3F51B5;
+  --primary-blue-light: #2196F3;
+  --primary-indigo-dark: #512DA8;
+  --primary-indigo-light: #673AB7;
+  --primary-deepblue-dark: #3F51B5;
+  --primary-deepblue-light: #5C6BC0;
 }
 
 @theme inline {
@@ -19,8 +33,255 @@
   }
 }
 
-body {
-  background: var(--background);
+html, body {
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  background-color: var(--background);
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fix for white text on white background */
+.text-white {
+  color: #ffffff !important;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.text-black {
+  color: #171717 !important;
+}
+
+.bg-black {
+  background-color: #171717 !important;
+}
+
+.text-gray-600 {
+  color: #4B5563 !important;
+}
+
+.text-gray-700 {
+  color: #374151 !important;
+}
+
+.text-gray-800 {
+  color: #1F2937 !important;
+}
+
+/* Fix for background colors */
+.bg-primary-green-dark {
+  background-color: var(--primary-green-dark) !important;
+}
+
+.bg-primary-green-light {
+  background-color: var(--primary-green-light) !important;
+}
+
+.bg-primary-teal-dark {
+  background-color: var(--primary-teal-dark) !important;
+}
+
+.bg-primary-teal-light {
+  background-color: var(--primary-teal-light) !important;
+}
+
+.bg-primary-blue-dark {
+  background-color: var(--primary-blue-dark) !important;
+}
+
+.bg-primary-blue-light {
+  background-color: var(--primary-blue-light) !important;
+}
+
+.bg-primary-indigo-dark {
+  background-color: var(--primary-indigo-dark) !important;
+}
+
+.bg-primary-indigo-light {
+  background-color: var(--primary-indigo-light) !important;
+}
+
+.bg-primary-deepblue-dark {
+  background-color: var(--primary-deepblue-dark) !important;
+}
+
+.bg-primary-deepblue-light {
+  background-color: var(--primary-deepblue-light) !important;
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Define Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Custom Utility Classes */
+.text-gradient {
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+}
+
+.gradient-green {
+  background-image: linear-gradient(to right, var(--primary-green-dark), var(--primary-green-light)) !important;
+}
+
+.gradient-teal {
+  background-image: linear-gradient(to right, var(--primary-teal-dark), var(--primary-teal-light)) !important;
+}
+
+.gradient-blue {
+  background-image: linear-gradient(to right, var(--primary-blue-light), var(--primary-blue-dark)) !important;
+}
+
+.gradient-indigo {
+  background-image: linear-gradient(to right, var(--primary-indigo-light), var(--primary-indigo-dark)) !important;
+}
+
+.gradient-purple {
+  background-image: linear-gradient(to right, var(--primary-deepblue-light), var(--primary-deepblue-dark)) !important;
+}
+
+/* Grid pattern for backgrounds */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Shadow Fixes */
+.shadow-glow {
+  box-shadow: 0 0 15px 2px rgba(63, 81, 181, 0.2);
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Card background overrides */
+.service-card, .project-card, .testimonial-card {
+  background-color: #ffffff !important;
+}
+
+/* Fix for dark text sections */
+.dark-section {
+  color: #ffffff !important;
+}
+
+.dark-section h1,
+.dark-section h2,
+.dark-section h3,
+.dark-section h4,
+.dark-section p {
+  color: #ffffff !important;
+}
+
+/* Fix for light text sections */
+.light-section {
+  color: #171717 !important;
+}
+
+.light-section h1,
+.light-section h2,
+.light-section h3,
+.light-section h4,
+.light-section p {
+  color: #171717 !important;
 }
