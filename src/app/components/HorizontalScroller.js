@@ -8,7 +8,10 @@ export default function HorizontalScroller({ title, items }) {
   const carousel = useRef();
 
   useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    // Only run on the client side and when carousel ref is available
+    if (typeof window !== 'undefined' && carousel.current) {
+      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    }
   }, []);
 
   return (
