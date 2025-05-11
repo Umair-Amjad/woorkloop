@@ -1,13 +1,20 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 export default function AnimatedHero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isBrowser, setIsBrowser] = useState(false);
   
+  // Initialize browser detection
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    setIsBrowser(true);
+  }, []);
+  
+  // Handle mouse movement only in the browser
+  useEffect(() => {
+    if (!isBrowser) return;
     
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -18,14 +25,19 @@ export default function AnimatedHero() {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  }, [isBrowser]);
   
+  // Safe transform calculation
   const calculateTransform = (axis) => {
-    if (typeof window === 'undefined') return 0;
+    if (!isBrowser) return 0;
+    
+    const viewportWidth = isBrowser ? window.innerWidth : 1;
+    const viewportHeight = isBrowser ? window.innerHeight : 1;
     
     const value = axis === 'x' 
-      ? mousePosition.x / window.innerWidth - 0.5 
-      : mousePosition.y / window.innerHeight - 0.5;
+      ? mousePosition.x / viewportWidth - 0.5 
+      : mousePosition.y / viewportHeight - 0.5;
+    
     return value * 20; // Adjust intensity of movement
   };
 

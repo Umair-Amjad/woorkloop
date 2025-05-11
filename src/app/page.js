@@ -2,9 +2,12 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
-import AnimatedHero from './components/AnimatedHero';
-import AnimatedServices from './components/AnimatedServices';
-import HorizontalScroller from './components/HorizontalScroller';
+import dynamic from 'next/dynamic';
+
+// Dynamically import components that use browser APIs with SSR disabled
+const AnimatedHero = dynamic(() => import('./components/AnimatedHero'), { ssr: false });
+const AnimatedServices = dynamic(() => import('./components/AnimatedServices'), { ssr: false });
+const HorizontalScroller = dynamic(() => import('./components/HorizontalScroller'), { ssr: false });
 
 export default function Home() {
   // Animation controls
