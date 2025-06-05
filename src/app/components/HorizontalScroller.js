@@ -17,7 +17,7 @@ export default function HorizontalScroller({ title, items }) {
   return (
     <section className="py-20 overflow-hidden bg-gray-800" style={{ backgroundColor: "#1a1a1a" }}>
       <div className="container mx-auto px-4 mb-12">
-      <h2 className="text-4xl font-bold bg-gradient-to-r from-primary-green-light to-primary-blue-light bg-clip-text text-transparent mb-4" style={{ textShadow: "0 0 20px rgba(0,0,0,0.7)", WebkitTextStroke: "2px rgba(255,255,255,0.15)" }}>{title}</h2>
+      <h2 className="text-4xl font-bold text-2xl md:text-3xl font-bold mb-4" style={{ textShadow: "0 0 20px rgba(0,0,0,0.7)", WebkitTextStroke: "2px rgba(255,255,255,0.15)" }}>{title}</h2>
         <div className="h-1 w-32 bg-gradient-to-r from-primary-green-dark to-primary-teal-light rounded-full"></div>
       </div>
       

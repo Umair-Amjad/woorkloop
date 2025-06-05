@@ -168,7 +168,7 @@ export default function Contact() {
           <div className="flex flex-col lg:flex-row items-start gap-16">
             {/* Contact Form */}
             <div className={`lg:w-1/2 transition-all duration-1000 transform ${isVisible.form ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-4xl font-bold mb-10 bg-gradient-to-r from-primary-green-light to-primary-teal-light bg-clip-text text-transparent" style={{ textShadow: "0 0 20px rgba(0,0,0,0.4)", WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}>Send Us a Message</h2>
+              <h2 className="text-4xl font-bold mb-10 bg-gradient-to-r from-primary-green-light to-primary-teal-light bg-clip-text " style={{ textShadow: "0 0 20px rgba(0,0,0,0.4)", WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}>Send Us a Message</h2>
               
               {formStatus.submitted && (
                 <div className={`p-4 mb-8 rounded-lg ${formStatus.error ? 'bg-red-900/30 text-red-300 border border-red-700' : 'bg-green-900/30 text-green-300 border border-green-700'}`}>
@@ -241,18 +241,25 @@ export default function Contact() {
             </div>
             
             {/* Map */}
-            <div className={`lg:w-1/2 transition-all duration-1000 transform ${isVisible.map ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-4xl font-bold mb-10 bg-gradient-to-r from-primary-blue-light to-primary-indigo-light bg-clip-text text-transparent" style={{ textShadow: "0 0 20px rgba(0,0,0,0.4)" }}>Our Location</h2>
-              
-              <div className="bg-gray-900 p-4 rounded-lg shadow-lg border border-gray-700">
-                <div className="w-full h-96 bg-gray-800 rounded-lg relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-blue-dark to-primary-blue-light opacity-20"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-xl font-bold text-white">Google Map would be embedded here</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+           <div className={`lg:w-1/2 transition-all duration-1000 transform ${isVisible.map ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+  <h2 className="text-4xl font-bold mb-10 bg-gradient-to-r from-primary-blue-light to-primary-indigo-light bg-clip-text " style={{ textShadow: "0 0 20px rgba(0,0,0,0.4)" }}>Our Location</h2>
+  
+  <div className="bg-gray-900 p-4 rounded-lg shadow-lg border border-gray-700">
+    <div className="w-full h-96 bg-gray-800 rounded-lg relative overflow-hidden">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d741.4141719833513!2d72.20778970829186!3d33.964287249828224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ded901630d3d11%3A0xb64907ca544cbaf5!2ssk%20computer%20Atta%20ullah%20jan%20market%2C%20Dubandi%20Bazar%20Jehang%C4%ABra%2C%20Nowshera%2C%20Khyber%20Pakhtunkhwa%2C%20Pakistan!5e0!3m2!1sen!2s!4v1749121910404!5m2!1sen!2s"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="absolute inset-0"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </section>

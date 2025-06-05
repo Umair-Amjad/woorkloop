@@ -208,14 +208,7 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary-blue-dark to-primary-indigo-dark"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <motion.h2 
-            className="text-center text-3xl font-bold bg-gradient-to-r from-primary-green-light to-primary-blue-light bg-clip-text text-transparent mb-12" style={{ textShadow: "0 0 20px rgba(0,0,0,0.7)", WebkitTextStroke: "2px rgba(255,255,255,0.15)" }}
-            initial={{ opacity: 0, y: -20 }}
-            animate={statsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-            transition={{ duration: 0.6 }}
-          >
-            Our Impact by the Numbers
-          </motion.h2>
+          <h1 className="text-center text-2xl md:text-3xl font-bold mb-6" style={{ textShadow: "0 0 20px rgba(0,0,0,0.4)" }}>Our Impact by the Numbers</h1>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <motion.div 
@@ -277,7 +270,7 @@ export default function Home() {
       <section ref={processRef} className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-primary-green-light to-primary-blue-light bg-clip-text text-transparent mb-4" style={{ textShadow: "0 0 20px rgba(0,0,0,0.7)", WebkitTextStroke: "2px rgba(255,255,255,0.15)" }}>
+            <h2 className="text-center text-4xl md:text-3xl font-bold mb-4" style={{ textShadow: "0 0 20px rgba(0,0,0,0.7)", WebkitTextStroke: "2px rgba(255,255,255,0.15)" }}>
               Our Development Process
             </h2>
             <div className="h-1 w-24 bg-gradient-to-r from-primary-green-light to-primary-blue-light rounded-full mx-auto mb-6"></div>
@@ -309,7 +302,7 @@ export default function Home() {
       <section ref={testimonialsRef} className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-primary-green-light to-primary-blue-light bg-clip-text text-transparent mb-4" style={{ textShadow: "0 0 20px rgba(0,0,0,0.7)", WebkitTextStroke: "2px rgba(255,255,255,0.15)" }}>
+            <h2 className="text-4xl font-bold text-center text-2xl md:text-3xl font-bold mb-6 mb-4" style={{ textShadow: "0 0 20px rgba(0,0,0,0.7)", WebkitTextStroke: "2px rgba(255,255,255,0.15)" }}>
               What Our Clients Say
             </h2>
             <div className="h-1 w-24 bg-gradient-to-r from-primary-green-light to-primary-blue-light rounded-full mx-auto mb-6"></div>

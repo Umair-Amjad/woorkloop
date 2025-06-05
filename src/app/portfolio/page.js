@@ -147,7 +147,7 @@ export default function Portfolio() {
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary-green-light to-primary-teal-light bg-clip-text text-transparent" style={{ textShadow: "0 0 20px rgba(0,0,0,0.7)", WebkitTextStroke: "2px rgba(255,255,255,0.15)" }}>Featured Projects</h2>
+            <h2 className="text-4xl font-bold mb-6 " style={{ textShadow: "0 0 20px rgba(0,0,0,0.7)", WebkitTextStroke: "2px rgba(255,255,255,0.15)" }}>Featured Projects</h2>
             <p className="text-white mb-6 text-xl font-semibold" style={{ textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>
               Explore our case studies to see how we've helped businesses solve their technology challenges.
             </p>
@@ -228,7 +228,7 @@ export default function Portfolio() {
       {/* Testimonials */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-primary-green-light to-primary-blue-light bg-clip-text text-transparent" style={{ textShadow: "0 0 20px rgba(0,0,0,0.7)", WebkitTextStroke: "2px rgba(255,255,255,0.15)" }}>What Our Clients Say</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 " style={{ textShadow: "0 0 20px rgba(0,0,0,0.7)", WebkitTextStroke: "2px rgba(255,255,255,0.15)" }}>What Our Clients Say</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (

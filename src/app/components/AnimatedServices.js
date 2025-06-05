@@ -101,10 +101,7 @@ export default function AnimatedServices() {
     <section className="py-24 bg-gray-900" ref={ref} style={{ backgroundColor: "#121212" }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <motion.h2 
-            className="text-4xl font-bold bg-gradient-to-r from-primary-green-light to-primary-blue-light bg-clip-text text-transparent mb-4" style={{ textShadow: "0 0 20px rgba(0,0,0,0.7)", WebkitTextStroke: "2px rgba(255,255,255,0.15)" }}>
-            Our Expertise
-          </motion.h2>
+          <h1 className="text-center text-2xl md:text-3xl font-bold mb-6" style={{ textShadow: "0 0 20px rgba(0,0,0,0.4)" }}>Our Expertise</h1>
           <motion.div
             className="h-1 w-24 bg-gradient-to-r from-primary-green-dark to-primary-teal-light rounded-full mx-auto mb-6"
             initial={{ width: 0 }}
